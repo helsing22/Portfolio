@@ -2,18 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Configurador de Página Web</title>
-  <!-- Fuente de iconos (Font Awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Iconos (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="header-content">
       <h1>Tu Web a tu Medida en Cuba</h1>
-      <p>Diseños limpios, prácticos y totalmente adaptados a móviles y computadoras. Sin distracciones y a precios accesibles.</p>
+      <p>
+        Diseños limpios, prácticos y totalmente adaptados a móviles y computadoras. Sin distracciones y a precios accesibles.
+      </p>
       <!-- Métodos de contacto en el encabezado -->
       <div class="contact-info">
         <a href="mailto:helsingrpp2@gmail.com" class="contact-link">
@@ -28,55 +30,126 @@
       <a href="#configurador" class="btn-cta">¡Crea tu web ahora!</a>
     </div>
   </header>
-  <section class="container">
-    <div class="services">
+  
+  <section id="servicios" class="services">
+    <div class="container">
       <h2>Nuestros Servicios</h2>
       <ul>
-        <li>Diseño web responsivo</li>
-        <li>Optimización para SEO</li>
-        <li>Mantenimiento y soporte</li>
+        <li><strong>Diseños limpios y prácticos</strong></li>
+        <li><strong>Adaptados a móviles y computadoras</strong></li>
+        <li><strong>Carga rápida sin anuncios o distracciones</strong></li>
       </ul>
     </div>
-    <div class="configurator" id="configurador">
-      <h2>Configurador</h2>
-      <form>
+  </section>
+  
+  <section id="configurador" class="configurator">
+    <div class="container">
+      <h2>Configura tu Página Web</h2>
+      <form id="webForm">
+        <!-- Selección del Tipo de Web -->
         <div class="form-group">
-          <label for="numero">Número</label>
-          <input type="number" id="numero" name="numero">
-        </div>
-        <div class="form-group">
-          <label for="opciones">Opciones</label>
-          <select id="opciones" name="opciones">
-            <option value="opcion1">Opción 1</option>
-            <option value="opcion2">Opción 2</option>
+          <label for="tipoWeb">Tipo de Web:</label>
+          <select id="tipoWeb" name="tipoWeb">
+            <option value="1000">Web Sencilla (1 pestaña) - 1000 CUP</option>
+            <option value="3000">Web Media (2 pestañas) - 3000 CUP</option>
+            <option value="1000">Portfolio Personal - 1000 CUP</option>
+            <option value="5000">Tienda sin Backend (con redirección a WhatsApp) - 5000 CUP</option>
+            <option value="actualizacion">Actualización de una Web Existente</option>
           </select>
         </div>
+        <!-- Precio para actualizaciones -->
+        <div class="form-group" id="grupo-updates" style="display:none;">
+          <label for="precioUpdate">Precio de Actualización (500 a 2000 CUP):</label>
+          <input type="number" id="precioUpdate" name="precioUpdate" min="500" max="2000" placeholder="Ingresa el precio">
+        </div>
+        <!-- Opción de imágenes -->
         <div class="form-group">
-          <button type="submit">Generar</button>
+          <label for="imagen">¿Proporcionas tus propias imágenes?</label>
+          <select id="imagen" name="imagen">
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <!-- Opciones adicionales (cargos extra) -->
+        <fieldset class="opciones-adicionales">
+          <legend>Opciones Adicionales (Cargos Extra)</legend>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="formulario" name="extra" value="300">
+            <label for="formulario">Formulario de contacto (+300 CUP)</label>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="redes" name="extra" value="200">
+            <label for="redes">Integración con redes sociales (+200 CUP)</label>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="testimonios" name="extra" value="500">
+            <label for="testimonios">Sección de testimonios (+500 CUP)</label>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="galeria" name="extra" value="500">
+            <label for="galeria">Galería de imágenes (+500 CUP)</label>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="chat" name="extra" value="600">
+            <label for="chat">Chat en vivo (+600 CUP)</label>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="blog" name="extra" value="700">
+            <label for="blog">Integración de Blog (+700 CUP)</label>
+          </div>
+        </fieldset>
+        <!-- Personalización de la Web -->
+        <fieldset class="personalizacion">
+          <legend>Personalización</legend>
+          <div class="form-group">
+            <label for="colorPrimario">Color Primario:</label>
+            <input type="color" id="colorPrimario" name="colorPrimario" value="#3498db">
+          </div>
+          <div class="form-group">
+            <label for="fuente">Tipo de Letra:</label>
+            <select id="fuente" name="fuente">
+              <option value="'Segoe UI', sans-serif">Segoe UI</option>
+              <option value="'Roboto', sans-serif">Roboto</option>
+              <option value="'Lato', sans-serif">Lato</option>
+              <option value="'Montserrat', sans-serif">Montserrat</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fondo">URL de Imagen de Fondo:</label>
+            <input type="url" id="fondo" name="fondo" placeholder="Ingresa la URL de la imagen">
+          </div>
+        </fieldset>
+        <!-- Botón de envío -->
+        <div class="form-group">
+          <button type="button" id="btnEnviar">Generar Pedido y Enviar por WhatsApp</button>
         </div>
       </form>
-    </div>
-    <div class="resumen">
-      <h3>Resumen</h3>
-      <p>Aquí se mostrará el resumen...</p>
+      <!-- Resumen del Pedido -->
+      <div id="resumen" class="resumen">
+        <h3>Resumen de Pedido</h3>
+        <p id="detallePedido"></p>
+        <p id="precioTotal"></p>
+      </div>
     </div>
   </section>
+  
   <footer>
-    <!-- Métodos de contacto en el pie de página -->
-    <div class="contact-info-footer">
-      <a href="mailto:helsingrpp2@gmail.com" class="contact-link">
-        <i class="fas fa-envelope"></i>
-        <span>helsingrpp2@gmail.com</span>
-      </a>
-      <a href="tel:+5355015233" class="contact-link">
-        <i class="fas fa-phone"></i>
-        <span>+53 55015233</span>
-      </a>
+    <div class="container">
+      <!-- Métodos de contacto en el pie de página -->
+      <div class="contact-info-footer">
+        <a href="mailto:helsingrpp2@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i>
+          <span>helsingrpp2@gmail.com</span>
+        </a>
+        <a href="tel:+5355015233" class="contact-link">
+          <i class="fas fa-phone"></i>
+          <span>+53 55015233</span>
+        </a>
+      </div>
+      <p>Horario de atención: Variable por temas de electricidad. Respuesta en el menor tiempo posible.</p>
     </div>
-    <p>&copy; 2025 Tu Web a tu Medida. Todos los derechos reservados.</p>
   </footer>
   
-  <!-- Opcional: Código de Font Awesome Kit (alternativa a la CDN anterior) -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
