@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Configurador de Página Web</title>
   <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   <!-- Iconos (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <div class="header-content">
       <h1>Tu Web a tu Medida en Cuba</h1>
       <p>
-        Diseños limpios, prácticos y totalmente adaptados a móviles y computadoras. Sin distracciones y a precios accesibles.
+        Diseños limpios, prácticos y totalmente adaptados a móviles y computadoras.
       </p>
-      <!-- Métodos de contacto en el encabezado -->
+      <!-- Métodos de contacto -->
       <div class="contact-info">
         <a href="mailto:helsingrpp2@gmail.com" class="contact-link">
           <i class="fas fa-envelope"></i>
@@ -27,21 +28,99 @@
           <span>+53 55015233</span>
         </a>
       </div>
-      <a href="#configurador" class="btn-cta">¡Crea tu web ahora!</a>
     </div>
   </header>
-  
-  <section id="servicios" class="services">
+  <!-- SECCIÓN SOBRE NOSOTROS -->
+  <section id="sobre-nosotros" class="info-section">
     <div class="container">
-      <h2>Nuestros Servicios</h2>
-      <ul>
-        <li><strong>Diseños limpios y prácticos</strong></li>
-        <li><strong>Adaptados a móviles y computadoras</strong></li>
-        <li><strong>Carga rápida sin anuncios o distracciones</strong></li>
-      </ul>
+      <h2 class="section-title">Quiénes Somos</h2>
+      <p class="section-text">
+        Somos una empresa especializada en la creación de sitios web profesionales, modernos y adaptados a las necesidades de tu negocio. Contamos con un equipo creativo y técnico que transforma ideas en experiencias digitales atractivas.
+      </p>
     </div>
   </section>
-  
+  <!-- SECCIÓN SERVICIOS -->
+  <section id="servicios" class="info-section">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="tabs">
+        <ul class="tab-links">
+          <li class="active" data-tab="servicio1">Diseño Web</li>
+          <li data-tab="servicio2">SEO & Marketing</li>
+          <li data-tab="servicio3">Mantenimiento</li>
+          <li data-tab="servicio4">Soporte Técnico</li>
+        </ul>
+        <div class="tab-content">
+          <div id="servicio1" class="tab active">
+            <p>
+              Creamos diseños limpios y modernos que se adaptan a cualquier dispositivo. Tu web no solo se verá profesional, sino que ofrecerá una experiencia única.
+            </p>
+          </div>
+          <div id="servicio2" class="tab">
+            <p>
+              Posiciona tu negocio en internet con estrategias SEO y campañas de marketing digital que aumentan tu visibilidad y llegan a tu público objetivo.
+            </p>
+          </div>
+          <div id="servicio3" class="tab">
+            <p>
+              Nuestro servicio de mantenimiento garantiza que tu web esté siempre actualizada, segura y funcionando al máximo de su potencial.
+            </p>
+          </div>
+          <div id="servicio4" class="tab">
+            <p>
+              Ofrecemos soporte técnico permanente para resolver cualquier incidencia rápidamente y ayudarte a mantener una presencia online impecable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECCIÓN PORTAFOLIO / PROYECTOS -->
+  <section id="proyectos" class="info-section">
+    <div class="container">
+      <h2 class="section-title">Proyectos Realizados</h2>
+      <p class="section-text">
+        Conoce algunos de los trabajos que hemos realizado para negocios, emprendedores y grandes proyectos corporativos. Cada proyecto es una muestra del compromiso con la calidad y la creatividad.
+      </p>
+      <div class="gallery">
+        <div class="gallery-item animate">
+          <img src="images/proyecto1.jpg" alt="Proyecto 1">
+          <p>Proyecto Corporativo</p>
+        </div>
+        <div class="gallery-item animate">
+          <img src="images/proyecto2.jpg" alt="Proyecto 2">
+          <p>Tienda Online</p>
+        </div>
+        <div class="gallery-item animate">
+          <img src="images/proyecto3.jpg" alt="Proyecto 3">
+          <p>Portfolio Creativo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECCIÓN TESTIMONIOS -->
+  <section id="testimonios" class="info-section">
+    <div class="container">
+      <h2 class="section-title">Testimonios</h2>
+      <p class="section-text">
+        "¡Excelente servicio! Mi sitio web se transformó en una poderosa herramienta para mi negocio. Recomendados 100%." - Cliente satisfecho
+      </p>
+    </div>
+  </section>
+  <!-- SECCIÓN CHAT CON IA (integrado con API gratuita de Deep Seek) -->
+  <section id="chat-ia" class="info-section chat-ia">
+    <div class="container">
+      <h2 class="section-title">Chat con Nuestra IA</h2>
+      <p class="section-text">
+        ¿Tienes dudas o necesitas asistencia al instante? Chatea con nuestra IA gratuita, basada en Deep Seek (versión gratuita), y recibe respuestas en tiempo real. ¡Una experiencia innovadora para impulsar tu negocio!
+      </p>
+      <div class="chat-container">
+        <!-- Se utiliza la URL de demostración de Deep Seek (reemplaza por la URL real si es necesario) -->
+        <iframe src="https://deepseek.ai/demo" title="Chat con Deep Seek" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- SECCIÓN CONFIGURADOR -->
   <section id="configurador" class="configurator">
     <div class="container">
       <h2>Configura tu Página Web</h2>
@@ -82,16 +161,12 @@
             <label for="redes">Integración con redes sociales (+200 CUP)</label>
           </div>
           <div class="form-group checkbox-group">
-            <input type="checkbox" id="testimonios" name="extra" value="500">
-            <label for="testimonios">Sección de testimonios (+500 CUP)</label>
+            <input type="checkbox" id="testimoniosExtra" name="extra" value="500">
+            <label for="testimoniosExtra">Sección de testimonios (+500 CUP)</label>
           </div>
           <div class="form-group checkbox-group">
             <input type="checkbox" id="galeria" name="extra" value="500">
             <label for="galeria">Galería de imágenes (+500 CUP)</label>
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="chat" name="extra" value="600">
-            <label for="chat">Chat en vivo (+600 CUP)</label>
           </div>
           <div class="form-group checkbox-group">
             <input type="checkbox" id="blog" name="extra" value="700">
@@ -119,7 +194,7 @@
             <input type="url" id="fondo" name="fondo" placeholder="Ingresa la URL de la imagen">
           </div>
         </fieldset>
-        <!-- Botón de envío -->
+        <!-- Botón de Envío -->
         <div class="form-group">
           <button type="button" id="btnEnviar">Generar Pedido y Enviar por WhatsApp</button>
         </div>
@@ -132,10 +207,11 @@
       </div>
     </div>
   </section>
-  
+  <!-- BOTÓN FIJO PARA MOSTRAR LA SECCIÓN CONFIGURADORA -->
+  <a id="btnMostrarConfig" class="btn-cta-fixed" href="#configurador">Crear mi web ahora</a>
+  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <!-- Métodos de contacto en el pie de página -->
       <div class="contact-info-footer">
         <a href="mailto:helsingrpp2@gmail.com" class="contact-link">
           <i class="fas fa-envelope"></i>
@@ -150,6 +226,7 @@
     </div>
   </footer>
   
-  <script src="script.js"></script>
+  <!-- Script para activar tabs, mostrar botón fijo y animaciones -->
+  <script src="js/script.js"></script>
 </body>
 </html>
