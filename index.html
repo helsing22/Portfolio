@@ -1,237 +1,132 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Configurador de Página Web</title>
-  <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Iconos (Font Awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>PoserLand-II | Servidor Modificado</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #292929;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffd5;
+      margin: 0;
+    }
+    .version-info {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      color: #00ffd5;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    ul.mod-list {
+      columns: 2;
+      padding-left: 1rem;
+    }
+    ul.mod-list li {
+      margin-bottom: 0.5rem;
+    }
+    .highlight {
+      color: #ff6f61;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #292929;
+      border-top: 2px solid #444;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- MENÚ DE NAVEGACIÓN -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#sobre-nosotros" class="nav-logo">Tu Web a tu Medida</a>
-      <ul class="nav-links">
-        <li><a href="#sobre-nosotros">Quiénes Somos</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
-        <li><a href="#chat-ia">Chat con IA (En Desarollo)</a></li>
-        <li><a href="#configurador">Configurar Web</a></li>
-      </ul>
-    </div>
-  </nav>
-  <!-- HEADER -->
   <header>
-    <div class="header-content">
-      <h1>Tu Web a tu Medida en Cuba</h1>
-      <p>
-        Creamos sitios web modernos, funcionales y adaptados a todo dispositivo para impulsar tu negocio.
-      </p>
-      <div class="contact-info">
-        <a href="mailto:helsingrpp2@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i>
-          <span>helsingrpp2@gmail.com</span>
-        </a>
-        <a href="tel:+5355015233" class="contact-link">
-          <i class="fas fa-phone"></i>
-          <span>+53 55015233</span>
-        </a>
-      </div>
+    <h1>🌟 Bienvenidos a PoserLand-II</h1>
+    <div class="version-info">
+      <p>Versión: <span class="highlight">1.20.1 ✅</span> <small>(antes 1.21.1 ❌)</small></p>
+      <p>ModLoader: <span class="highlight">Fabric ✅</span> <small>(antes Neoforge ❌)</small></p>
     </div>
   </header>
-  <!-- SECCIÓN SOBRE NOSOTROS -->
-  <section id="sobre-nosotros" class="info-section">
-    <div class="container">
-      <h2 class="section-title">Quiénes Somos</h2>
-      <p class="section-text">
-        Somos una agencia digital de desarrollo web que buscamos ofrecerle a los negocios cubanos una manera facil de comenzar a poner su negocio online.
-        Todos sabemos que hoy... las redes mueven el mundo
-      </p>
-    </div>
-  </section>
-  <!-- SECCIÓN SERVICIOS -->
-  <section id="servicios" class="info-section">
-    <div class="container">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      <div class="tabs">
-        <ul class="tab-links">
-          <li class="active" data-tab="servicio1">Diseño Web</li>
-          <li data-tab="servicio3">Mantenimiento</li>
-          <li data-tab="servicio4">Soporte Técnico</li>
-        </ul>
-        <div class="tab-content">
-          <div id="servicio1" class="tab active">
-            <p>
-              Creamos diseños limpios y responsivos que comunican eficazmente la identidad de tu marca, con interfaces modernas y fáciles de navegar.
-            </p>
-          </div>
-          <div id="servicio2" class="tab">
-            <p>
-              Posiciona tu negocio en los primeros lugares de los buscadores y crea campañas de marketing digital que capten nuevos clientes.
-            </p>
-          </div>
-          <div id="servicio3" class="tab">
-            <p>
-              Ofrecemos servicios de mantenimiento continuo para asegurar que tu web esté siempre actualizada, segura y con un desempeño óptimo.
-            </p>
-          </div>
-          <div id="servicio4" class="tab">
-            <p>
-              Nuestro soporte técnico 24/7 está listo para ayudarte a resolver cualquier incidencia y garantizar la continuidad de tu presencia online.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- SECCIÓN PROYECTOS -->
-  <section id="proyectos" class="info-section">
-    <div class="container">
-      <h2 class="section-title">Proyectos Realizados</h2>
-      <p class="section-text">
-        Conoce algunos de nuestros casos de éxito: desde portafolios personales hasta soluciones corporativas complejas, cada proyecto refleja nuestro compromiso con la innovación y la calidad.
-      </p>
-      <div class="gallery">
-        <div class="gallery-item animate">
-          <img src="images/proyecto1.jpg" alt="Proyecto Corporativo">
-          <p>Proyecto Corporativo</p>
-        </div>
-        <div class="gallery-item animate">
-          <img src="images/proyecto2.jpg" alt="Tienda Online">
-          <p>Tienda Online</p>
-        </div>
-        <div class="gallery-item animate">
-          <img src="images/proyecto3.jpg" alt="Portfolio Creativo">
-          <p>Portfolio Creativo</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- SECCIÓN TESTIMONIOS -->
-  <!-- SECCIÓN CHAT CON IA -->
-  <section id="chat-ia" class="info-section chat-ia">
-    <div class="container">
-      <h2 class="section-title">Chat con Deep Seek (En Desarollo)</h2>
-      <p class="section-text">
-        ¿Necesitas respuestas rápidas o asesoramiento instantáneo? Interactúa con nuestro chatbot basado en la API gratuita de Deep Seek y obtén ayuda al instante.
-      </p>
-      <div class="chat-container">
-        <!-- URL de ejemplo para Deep Seek (verifica la disponibilidad de la demo gratuita) -->
-        <iframe src="https://deepseek.ai/demo" title="Chat con Deep Seek" frameborder="0"></iframe>
-      </div>
-    </div>
-  </section>
-  <!-- SECCIÓN CONFIGURADOR -->
-  <section id="configurador" class="configurator">
-    <div class="container">
-      <h2>Configura tu Página Web</h2>
-      <form id="webForm">
-        <!-- Selección del Tipo de Web -->
-        <div class="form-group">
-          <label for="tipoWeb">Tipo de Web:</label>
-          <select id="tipoWeb" name="tipoWeb">
-            <option value="1000">Web Sencilla (1 pestaña) - 1000 CUP</option>
-            <option value="3000">Web Media (2 pestañas) - 3000 CUP</option>
-            <option value="1000">Portfolio Personal - 1000 CUP</option>
-            <option value="5000">Tienda sin Backend (con redirección a WhatsApp) - 5000 CUP</option>
-            <option value="actualizacion">Actualización de una Web Existente</option>
-          </select>
-        </div>
-        <!-- Precio para actualizaciones -->
-        <div class="form-group" id="grupo-updates" style="display:none;">
-          <label for="precioUpdate">Precio de Actualización (500 a 2000 CUP):</label>
-          <input type="number" id="precioUpdate" name="precioUpdate" min="500" max="2000" placeholder="Ingresa el precio">
-        </div>
-        <!-- Opción de imágenes -->
-        <div class="form-group">
-          <label for="imagen">¿Proporcionas tus propias imágenes?</label>
-          <select id="imagen" name="imagen">
-            <option value="Sí">Sí</option>
-            <option value="No">No</option>
-          </select>
-        </div>
-        <!-- Opciones adicionales -->
-        <fieldset class="opciones-adicionales">
-          <legend>Opciones Adicionales (Cargos Extra)</legend>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="formulario" name="extra" value="300">
-            <label for="formulario">Formulario de contacto (+300 CUP)</label>
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="redes" name="extra" value="200">
-            <label for="redes">Integración con redes sociales (+200 CUP)</label>
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="testimoniosExtra" name="extra" value="500">
-            <label for="testimoniosExtra">Sección de testimonios (+500 CUP)</label>
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="galeria" name="extra" value="500">
-            <label for="galeria">Galería de imágenes (+500 CUP)</label>
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="blog" name="extra" value="700">
-            <label for="blog">Integración de Blog (+700 CUP)</label>
-          </div>
-        </fieldset>
-        <!-- Personalización -->
-        <fieldset class="personalizacion">
-          <legend>Personalización</legend>
-          <div class="form-group">
-            <label for="colorPrimario">Color Primario:</label>
-            <input type="color" id="colorPrimario" name="colorPrimario" value="#3498db">
-          </div>
-          <div class="form-group">
-            <label for="fuente">Tipo de Letra:</label>
-            <select id="fuente" name="fuente">
-              <option value="'Segoe UI', sans-serif">Segoe UI</option>
-              <option value="'Roboto', sans-serif">Roboto</option>
-              <option value="'Lato', sans-serif">Lato</option>
-              <option value="'Montserrat', sans-serif">Montserrat</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="fondo">URL de Imagen de Fondo:</label>
-            <input type="url" id="fondo" name="fondo" placeholder="Ingresa la URL de la imagen">
-          </div>
-        </fieldset>
-        <!-- Botón de Envío -->
-        <div class="form-group">
-          <button type="button" id="btnEnviar">Generar Pedido y Enviar por WhatsApp</button>
-        </div>
-      </form>
-      <!-- Resumen del Pedido -->
-      <div id="resumen" class="resumen">
-        <h3>Resumen de Pedido</h3>
-        <p id="detallePedido"></p>
-        <p id="precioTotal"></p>
-      </div>
-    </div>
-  </section>
-  <!-- BOTÓN FIJO PARA MOSTRAR EL CONFIGURADOR -->
-  <a id="btnMostrarConfig" class="btn-cta-fixed" href="#configurador">Crear mi web ahora</a>
-  <!-- FOOTER -->
+
+  <div class="container">
+    <section class="section">
+      <h2>🧩 Lista de Mods (42)</h2>
+      <ul class="mod-list">
+        <li>Architectury API</li>
+        <li>Balm (Cliente)</li>
+        <li>Beautify</li>
+        <li>Carry On</li>
+        <li>Cloth Config</li>
+        <li>Clumps</li>
+        <li>Cupboard</li>
+        <li>Dungeons and Taverns</li>
+        <li>Fabric API</li>
+        <li>Fabric Language Kotlin</li>
+        <li>Falling Trees</li>
+        <li>Forge Config</li>
+        <li>Framework</li>
+        <li>FTB Chunks</li>
+        <li>FTB Library</li>
+        <li>FTB Teams</li>
+        <li>Goblin Traders</li>
+        <li>Journey Map (Cliente)</li>
+        <li>Journey Map Integración</li>
+        <li>JEI (Cliente)</li>
+        <li>Macaw Bridges</li>
+        <li>Macaw Doors</li>
+        <li>Macaw Fences y Walls</li>
+        <li>Macaw Furniture</li>
+        <li>Macaw Lights and...</li>
+        <li>Macaw Path and...</li>
+        <li>MCA Reborn</li>
+        <li>Medieval Origins</li>
+        <li>Mod Menu (Cliente)</li>
+        <li>Only Hammers and Excavators</li>
+        <li>Origins</li>
+        <li>OwO</li>
+        <li>Pehkui</li>
+        <li>PlayerAnimator</li>
+        <li>Traveler's Backpack</li>
+        <li>Spell Engine</li>
+        <li>Spell Power Attributes</li>
+        <li>Structure Essentials</li>
+        <li>Trinkets</li>
+        <li>Wraith Waystones</li>
+        <li>Yet AnotherConfigLib</li>
+        <li>Zoomify (Cliente)</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>📦 Mudanza de servidor</h2>
+      <p>Estamos migrando a una versión más estable y optimizada. En breve se subirán los <strong>65MB</strong> de mods comprimidos para descarga directa.</p>
+      <p>¡Prepárate para una experiencia renovada, con más rendimiento y compatibilidad!</p>
+    </section>
+  </div>
+
   <footer>
-    <div class="container">
-      <div class="contact-info-footer">
-        <a href="mailto:helsingrpp2@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i>
-          <span>helsingrpp2@gmail.com</span>
-        </a>
-        <a href="tel:+5355015233" class="contact-link">
-          <i class="fas fa-phone"></i>
-          <span>+53 55015233</span>
-        </a>
-      </div>
-      <p>Horario de atención: Variable por temas de electricidad. Respuesta en el menor tiempo posible.</p>
-    </div>
+    <p>#Mudanzadeserver | PoserLand-II © 2025</p>
   </footer>
-  
-  <!-- Script para activar tabs, mostrar botón fijo y animaciones -->
-  <script src="script.js"></script>
 </body>
 </html>
