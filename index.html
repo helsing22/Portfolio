@@ -16,8 +16,9 @@
       background-color: #121212;
       color: #f0f0f0;
     }
+
+    /* HEADER */
     header {
-      position: relative;
       text-align: center;
       padding: 3rem 1rem;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -28,46 +29,25 @@
       object-fit: cover;
       border-bottom: 3px solid #00ffd5;
     }
-    header img.logo {
-      width: 120px;
-      margin-top: -60px;
-      border-radius: 50%;
-      border: 3px solid #00ffd5;
-      background-color: #fff;
-    }
     header h1 {
       font-size: 2.8rem;
       margin: 1rem 0 0.5rem;
       color: #00ffd5;
       animation: fadeDown 1s ease-out;
     }
-          .download-button {
-  display: inline-block;
-  background-color: #00ffd5;
-  color: #121212;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 0 10px #00ffd5;
-}
-
-.download-button:hover {
-  background-color: #00c4a7;
-  box-shadow: 0 0 15px #00ffd5;
-}
     .version-info {
       font-size: 1.2rem;
       animation: fadeUp 1s ease-out;
     }
+
+    /* CONTAINER */
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 2rem 1rem;
     }
+
+    /* SECTIONS */
     .section {
       margin-bottom: 3rem;
       opacity: 0;
@@ -84,6 +64,8 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
     }
+
+    /* MOD LIST */
     ul.mod-list {
       columns: 2;
       padding-left: 1rem;
@@ -91,14 +73,14 @@
     ul.mod-list li {
       margin-bottom: 0.5rem;
     }
+
+    /* BUTTONS */
     .highlight {
       color: #ff6f61;
       font-weight: bold;
     }
-    .whatsapp-button {
+    .download-button, .whatsapp-button {
       display: inline-block;
-      background-color: #25D366;
-      color: white;
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
       font-weight: bold;
@@ -107,9 +89,41 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
+    .download-button {
+      background-color: #00ffd5;
+      color: #121212;
+      box-shadow: 0 0 10px #00ffd5;
+    }
+    .download-button:hover {
+      background-color: #00c4a7;
+      box-shadow: 0 0 15px #00ffd5;
+    }
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+    }
     .whatsapp-button:hover {
       background-color: #1ebe5d;
     }
+
+    /* PATCHES */
+    .patch-log {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .patch-entry {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #1e1e1e;
+      border-left: 4px solid #00ffd5;
+      border-radius: 6px;
+    }
+    .patch-entry ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 1rem;
@@ -118,6 +132,7 @@
       font-size: 0.9rem;
     }
 
+    /* ANIMATIONS */
     @keyframes fadeDown {
       from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -134,12 +149,14 @@
     <img class="banner" src="image_1762547854371.jpeg" alt="Banner del servidor">
     <h1>🌟 Bienvenidos a PoserLand-II</h1>
     <div class="version-info">
-      <p>Versión: <span class="highlight">1.20.1 ✅</span>
-      <p>ModLoader: <span class="highlight">Fabric ✅</span>
+      <p>Versión: <span class="highlight">1.20.1 ✅</span></p>
+      <p>ModLoader: <span class="highlight">Fabric ✅</span></p>
     </div>
   </header>
 
   <div class="container">
+
+    <!-- MODS -->
     <section class="section" id="mods">
       <h2>🧩 Lista de Mods (42)</h2>
       <ul class="mod-list">
@@ -147,12 +164,37 @@
       </ul>
     </section>
 
-  <section class="section" id="descarga">
-  <h2>📥 Descargar Modpack</h2>
-  <p>Haz clic en el botón para descargar el modpack completo desde MediaFire.</p>
-  <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank">Descargar Modpack</a>
-  </section>
-<!DOCTYPE html>
+    <!-- MODPACK -->
+    <section class="section" id="descarga">
+      <h2>📥 Descargar Modpack</h2>
+      <p>Haz clic en el botón para descargar el modpack completo desde Mega.</p>
+      <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank">Descargar Modpack</a>
+    </section>
+
+    <!-- PATCHES -->
+    <section class="section" id="parches">
+      <h2>🛠️ Parches del Servidor</h2>
+      <p>Los parches contienen cambios de mods. Para instalarlos:</p>
+      <ul>
+        <li>📁 Copiar el parche a la carpeta donde están los mods</li>
+        <li>🧩 Descomprimir el archivo</li>
+        <li>🗑️ Eliminar el .zip si así lo desea</li>
+        <li>✅ ¡Listo!</li>
+      </ul>
+
+      <h3>🔧 Últimos Parches</h3>
+      <div class="patch-log">
+        <div class="patch-entry">
+          <p><strong>Parche #1 - 07/11/2025</strong></p>
+          <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank">Descargar Parche</a>
+          <ul>
+            <li>🆕 Añadido Spell Power Attributes</li>
+            <li>🧹 Eliminado Clumps por incompatibilidad</li>
+            <li>🔄 Actualizado FTB Library</li>
+          </ul>
+        </div>
+      </div>
+    </
 <html lang="es">
 <head>
   <meta charset="UTF-8">
