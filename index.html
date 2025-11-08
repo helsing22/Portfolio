@@ -12,7 +12,7 @@
       background-color: #121212; color: #f0f0f0;
     }
 
-    /* HEADER */
+    / HEADER /
     header {
       text-align: center; padding: 3rem 1rem;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -28,7 +28,7 @@
     .version-info { font-size: 1.1rem; animation: fadeUp 0.8s ease-out; }
     .highlight { color: #ff6f61; font-weight: bold; }
 
-    /* LAYOUT */
+    / LAYOUT /
     .container { max-width: 1000px; margin: auto; padding: 2rem 1rem; }
     .section {
       margin-bottom: 3rem; opacity: 0; transform: translateY(50px);
@@ -40,11 +40,11 @@
       padding-bottom: 0.5rem; margin-bottom: 1rem; font-size: 1.4rem;
     }
 
-    /* MODS */
+    / MODS /
     ul.mod-list { columns: 2; column-gap: 2rem; padding-left: 1rem; }
     ul.mod-list li { margin-bottom: 0.5rem; }
 
-    /* BUTTONS */
+    / BUTTONS /
     .download-button, .whatsapp-button, .copy-ip-button {
       display: inline-block; padding: 0.8rem 1.5rem; font-size: 1rem; font-weight: bold;
       border: none; border-radius: 8px; text-decoration: none;
@@ -60,7 +60,7 @@
     .copy-ip-button { background-color: #2d2d2d; color: #00ffd5; border: 1px solid #00ffd5; }
     .copy-ip-button:hover { background-color: #00ffd5; color: #121212; transform: translateY(-2px); }
 
-    /* IP BOX */
+    / IP BOX /
     .ip-box {
       display: inline-flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
       background: #1e1e1e; color: #00ffd5; font-size: 1.2rem; font-weight: bold;
@@ -69,7 +69,7 @@
     }
     .ip-text { user-select: all; }
 
-    /* PATCHES */
+    / PATCHES /
     .patch-log { margin-top: 1rem; padding-left: 0; }
     .patch-entry {
       margin-bottom: 2rem; padding: 1rem; background-color: #1e1e1e;
@@ -80,13 +80,13 @@
     }
     .patch-title { font-weight: 700; }
 
-    /* FOOTER */
+    / FOOTER /
     footer {
       text-align: center; padding: 1rem; background-color: #292929;
       border-top: 2px solid #444; font-size: 0.9rem;
     }
 
-    /* RESPONSIVE */
+    / RESPONSIVE /
     @media (max-width: 640px) {
       header h1 { font-size: 2rem; }
       .section h2 { font-size: 1.2rem; }
@@ -94,7 +94,7 @@
       .ip-box { width: 100%; justify-content: space-between; }
     }
 
-    /* ANIMATIONS */
+    / ANIMATIONS /
     @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeUp   { from { opacity: 0; transform: translateY(20px); }  to { opacity: 1; transform: translateY(0); } }
   </style>
@@ -112,6 +112,64 @@
   </header>
 
   <main class="container">
+    <!-- CARACTERÍSTICAS DESTACADAS -->
+    <section class="section" id="caracteristicas" aria-labelledby="caracteristicas-title">
+      <h2 id="caracteristicas-title">🌟 Características Destacadas</h2>
+      <ul>
+        <li>Mods populares como Dungeons and Taverns y Journey Map.</li>
+        <li>Eventos semanales y actividades comunitarias.</li>
+        <li>Comunidad amigable y dispuesta a ayudar.</li>
+      </ul>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section" id="testimonios" aria-labelledby="testimonios-title">
+      <h2 id="testimonios-title">🗣️ Testimonios de Jugadores</h2>
+      <blockquote>
+        "PoserLand-II es el mejor servidor al que he jugado. Los mods son increíbles y la comunidad es muy amigable." - JuanP
+      </blockquote>
+      <blockquote>
+        "Me encanta cómo están organizados los eventos y lo fácil que es hacer amigos aquí." - MariaG
+      </blockquote>
+    </section>
+
+    <!-- CAPTURAS DE PANTALLA -->
+    <section class="section" id="capturas" aria-labelledby="capturas-title">
+      <h2 id="capturas-title">📸 Capturas de Pantalla</h2>
+      <div class="gallery">
+        <img src="capture1.jpg" alt="Captura 1" />
+        <img src="capture2.jpg" alt="Captura 2" />
+        <img src="capture3.jpg" alt="Captura 3" />
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="section" id="faqs" aria-labelledby="faqs-title">
+      <h2 id="faqs-title">❓ Preguntas Frecuentes</h2>
+      <details>
+        <summary>¿Cómo me uno al servidor?</summary>
+        <p>Sigue las instrucciones en la sección "IP del Servidor" para conectarte.</p>
+      </details>
+      <details>
+        <summary>¿Qué versión de Minecraft necesito?</summary>
+        <p>Necesitas la versión 1.20.1.</p>
+      </details>
+      <details>
+        <summary>¿Cuáles son los comandos básicos?</summary>
+        <p>Puedes encontrar una lista de comandos útiles en nuestro grupo de WhatsApp.</p>
+      </details>
+    </section>
+
+    <!-- ENLACES ÚTILES -->
+    <section class="section" id="enlaces" aria-labelledby="enlaces-title">
+      <h2 id="enlaces-title">🔗 Enlaces Útiles</h2>
+      <ul>
+        <li><a href="https://chat.whatsapp.com/Het2MDdish6CMz69PING59?mode=emscopyt" target="_blank" rel="noopener">Grupo de WhatsApp</a></li>
+        <li><a href="https://example.com/tutoriales" target="_blank" rel="noopener">Tutoriales de Mods</a></li>
+        <li><a href="https://example.com/guia" target="_blank" rel="noopener">Guía de Supervivencia</a></li>
+      </ul>
+    </section>
+
     <!-- MODS -->
     <section class="section" id="mods" aria-labelledby="mods-title">
       <h2 id="mods-title">🧩 Lista de Mods (42)</h2>
@@ -166,74 +224,50 @@
         <article class="patch-entry" aria-label="Parche #2">
           <div class="patch-header">
             <span class="patch-title">Parche #2 - DD/MM/AAAA</span>
-            <a class="download-button" href="URL_DEL_ZIP" target="_blank" rel="noopener">Descargar Parche</a>
+            <a class="download-button" href="URLDELZIP" target="_blank" rel="noopener">Descargar Parche</a>
           </div>
           <ul>
             <li>Detalle 1</li>
             <li>Detalle 2</li>
-            <li>Detalle 3</li>
-          </ul>
+            <
         </article>
-        -->
       </div>
-    </section>
-
-    <!-- WHATSAPP -->
-    <section class="section" id="whatsapp" aria-labelledby="whatsapp-title">
-      <h2 id="whatsapp-title">📲 Únete al grupo de WhatsApp</h2>
-      <p>Conéctate con la comunidad, comparte ideas y recibe actualizaciones del servidor.</p>
-      <a class="whatsapp-button" href="https://chat.whatsapp.com/Het2MDdish6CMz69PING59?mode=ems_copy_t" target="_blank" rel="noopener">Entrar al grupo</a>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>#Mudanzadeserver | PoserLand-II © 2025</p>
+    <p>&copy; 2025 PoserLand-II. Todos los derechos reservados.</p>
+    <p>Sigue nuestras redes sociales:</p>
+    <a href="https://twitter.com/poserlandii" target="_blank" rel="noopener">Twitter</a> |
+    <a href="https://instagram.com/poserlandii" target="_blank" rel="noopener">Instagram</a> |
+    <a href="https://discord.gg/poserlandii" target="_blank" rel="noopener">Discord</a>
   </footer>
 
   <!-- SCRIPTS -->
   <script>
-    // Animación de aparición por scroll
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const sections = document.querySelectorAll('.section');
+      const ipText = document.getElementById('ipText');
+      const copyIpBtn = document.getElementById('copyIpBtn');
+      const copyStatus = document.getElementById('copyStatus');
+
+      // Show sections with fade-in animation
+      sections.forEach(section => {
+        section.classList.add('visible');
       });
-    }, { threshold: 0.2 });
-    sections.forEach((section) => observer.observe(section));
-    if (!('IntersectionObserver' in window)) {
-      sections.forEach((section) => section.classList.add('visible'));
-    }
 
-    // Copiar IP al portapapeles
-    const ipTextEl = document.getElementById('ipText');
-    const copyBtn = document.getElementById('copyIpBtn');
-    const copyStatus = document.getElementById('copyStatus');
-
-    copyBtn.addEventListener('click', async () => {
-      const ip = ipTextEl.textContent.trim();
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(ip);
-        } else {
-          // Fallback para navegadores antiguos
-          const temp = document.createElement('textarea');
-          temp.value = ip;
-          document.body.appendChild(temp);
-          temp.select();
-          document.execCommand('copy');
-          document.body.removeChild(temp);
-        }
-        copyStatus.textContent = 'IP copiada al portapapeles ✔';
-        setTimeout(() => (copyStatus.textContent = ''), 2500);
-      } catch (e) {
-        copyStatus.textContent = 'No se pudo copiar la IP. Selecciónala manualmente.';
-        setTimeout(() => (copyStatus.textContent = ''), 3000);
-      }
+      // Copy IP to clipboard
+      copyIpBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(ipText.textContent).then(() => {
+          copyStatus.textContent = '¡IP copiada al portapapeles!';
+          copyStatus.style.color = '#00ffd5';
+        }).catch(err => {
+          copyStatus.textContent = 'Error al copiar la IP.';
+          copyStatus.style.color = '#ff6f61';
+        });
+      });
     });
   </script>
 </body>
-</html>
+      </html>
