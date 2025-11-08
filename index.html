@@ -12,7 +12,7 @@
       background-color: #121212; color: #f0f0f0;
     }
 
-    / HEADER /
+    /* HEADER */
     header {
       text-align: center; padding: 3rem 1rem;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -28,7 +28,7 @@
     .version-info { font-size: 1.1rem; animation: fadeUp 0.8s ease-out; }
     .highlight { color: #ff6f61; font-weight: bold; }
 
-    / LAYOUT /
+    /* LAYOUT */
     .container { max-width: 1000px; margin: auto; padding: 2rem 1rem; }
     .section {
       margin-bottom: 3rem; opacity: 0; transform: translateY(50px);
@@ -40,11 +40,11 @@
       padding-bottom: 0.5rem; margin-bottom: 1rem; font-size: 1.4rem;
     }
 
-    / MODS /
+    /* MODS */
     ul.mod-list { columns: 2; column-gap: 2rem; padding-left: 1rem; }
     ul.mod-list li { margin-bottom: 0.5rem; }
 
-    / BUTTONS /
+    /* BUTTONS */
     .download-button, .whatsapp-button, .copy-ip-button {
       display: inline-block; padding: 0.8rem 1.5rem; font-size: 1rem; font-weight: bold;
       border: none; border-radius: 8px; text-decoration: none;
@@ -60,7 +60,7 @@
     .copy-ip-button { background-color: #2d2d2d; color: #00ffd5; border: 1px solid #00ffd5; }
     .copy-ip-button:hover { background-color: #00ffd5; color: #121212; transform: translateY(-2px); }
 
-    / IP BOX /
+    /* IP BOX */
     .ip-box {
       display: inline-flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
       background: #1e1e1e; color: #00ffd5; font-size: 1.2rem; font-weight: bold;
@@ -69,7 +69,7 @@
     }
     .ip-text { user-select: all; }
 
-    / PATCHES /
+    /* PATCHES */
     .patch-log { margin-top: 1rem; padding-left: 0; }
     .patch-entry {
       margin-bottom: 2rem; padding: 1rem; background-color: #1e1e1e;
@@ -80,13 +80,13 @@
     }
     .patch-title { font-weight: 700; }
 
-    / FOOTER /
+    /* FOOTER */
     footer {
       text-align: center; padding: 1rem; background-color: #292929;
       border-top: 2px solid #444; font-size: 0.9rem;
     }
 
-    / RESPONSIVE /
+    /* RESPONSIVE */
     @media (max-width: 640px) {
       header h1 { font-size: 2rem; }
       .section h2 { font-size: 1.2rem; }
@@ -94,9 +94,9 @@
       .ip-box { width: 100%; justify-content: space-between; }
     }
 
-    / ANIMATIONS /
+    /* ANIMATIONS */
     @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeUp   { from { opacity: 0; transform: translateY(20px); }  to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp   { from { opacity: 0; transform: translateY(20px);  }  to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
@@ -270,4 +270,4 @@
     });
   </script>
 </body>
-      </html>
+			</html>
