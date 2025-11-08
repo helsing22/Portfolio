@@ -6,168 +6,97 @@
   <title>PoserLand-II | Servidor Modificado</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
+      margin: 0; font-family: 'Montserrat', sans-serif;
+      background-color: #121212; color: #f0f0f0;
     }
 
     /* HEADER */
     header {
-      text-align: center;
-      padding: 3rem 1rem;
+      text-align: center; padding: 3rem 1rem;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     }
     header img.banner {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
+      width: 100%; max-height: 300px; object-fit: cover;
       border-bottom: 3px solid #00ffd5;
     }
     header h1 {
-      font-size: 2.6rem;
-      margin: 1rem 0 0.5rem;
-      color: #00ffd5;
+      font-size: 2.6rem; margin: 1rem 0 0.5rem; color: #00ffd5;
       animation: fadeDown 0.8s ease-out;
     }
-    .version-info {
-      font-size: 1.1rem;
-      animation: fadeUp 0.8s ease-out;
-    }
+    .version-info { font-size: 1.1rem; animation: fadeUp 0.8s ease-out; }
+    .highlight { color: #ff6f61; font-weight: bold; }
 
-    /* CONTAINER & SECTIONS */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
+    /* LAYOUT */
+    .container { max-width: 1000px; margin: auto; padding: 2rem 1rem; }
     .section {
-      margin-bottom: 3rem;
-      opacity: 0;
-      transform: translateY(50px);
+      margin-bottom: 3rem; opacity: 0; transform: translateY(50px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .section.visible { opacity: 1; transform: translateY(0); }
     .section h2 {
-      color: #00ffd5;
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
+      color: #00ffd5; border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem; margin-bottom: 1rem; font-size: 1.4rem;
     }
 
-    /* MOD LIST */
-    ul.mod-list {
-      columns: 2;
-      column-gap: 2rem;
-      padding-left: 1rem;
-    }
-    ul.mod-list li {
-      margin-bottom: 0.5rem;
-    }
+    /* MODS */
+    ul.mod-list { columns: 2; column-gap: 2rem; padding-left: 1rem; }
+    ul.mod-list li { margin-bottom: 0.5rem; }
 
     /* BUTTONS */
-    .highlight {
-      color: #ff6f61;
-      font-weight: bold;
-    }
-    .download-button,
-    .whatsapp-button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
+    .download-button, .whatsapp-button, .copy-ip-button {
+      display: inline-block; padding: 0.8rem 1.5rem; font-size: 1rem; font-weight: bold;
+      border: none; border-radius: 8px; text-decoration: none;
       transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
       will-change: transform;
     }
     .download-button {
-      background-color: #00ffd5;
-      color: #121212;
-      box-shadow: 0 0 10px #00ffd5;
+      background-color: #00ffd5; color: #121212; box-shadow: 0 0 10px #00ffd5;
     }
-    .download-button:hover {
-      background-color: #00c4a7;
-      box-shadow: 0 0 15px #00ffd5;
-      transform: translateY(-2px);
+    .download-button:hover { background-color: #00c4a7; box-shadow: 0 0 15px #00ffd5; transform: translateY(-2px); }
+    .whatsapp-button { background-color: #25D366; color: #fff; }
+    .whatsapp-button:hover { background-color: #1ebe5d; transform: translateY(-2px); }
+    .copy-ip-button { background-color: #2d2d2d; color: #00ffd5; border: 1px solid #00ffd5; }
+    .copy-ip-button:hover { background-color: #00ffd5; color: #121212; transform: translateY(-2px); }
+
+    /* IP BOX */
+    .ip-box {
+      display: inline-flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+      background: #1e1e1e; color: #00ffd5; font-size: 1.2rem; font-weight: bold;
+      padding: 0.8rem 1.2rem; border: 2px solid #00ffd5; border-radius: 8px;
+      box-shadow: 0 0 12px #00ffd5; margin-top: 0.5rem;
     }
-    .whatsapp-button {
-      background-color: #25D366;
-      color: white;
-    }
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
-      transform: translateY(-2px);
-    }
+    .ip-text { user-select: all; }
 
     /* PATCHES */
-    .patch-log {
-      margin-top: 1rem;
-      padding-left: 0;
-    }
+    .patch-log { margin-top: 1rem; padding-left: 0; }
     .patch-entry {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background-color: #1e1e1e;
-      border-left: 4px solid #00ffd5;
-      border-radius: 6px;
+      margin-bottom: 2rem; padding: 1rem; background-color: #1e1e1e;
+      border-left: 4px solid #00ffd5; border-radius: 6px;
     }
-    .patch-entry .patch-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.8rem;
-      margin-bottom: 0.6rem;
+    .patch-header {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-bottom: 0.6rem;
     }
-    .patch-entry .patch-title {
-      font-weight: 700;
-    }
-    .patch-entry ul {
-      margin-top: 0.5rem;
-      padding-left: 1.2rem;
-    }
+    .patch-title { font-weight: 700; }
 
     /* FOOTER */
     footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #292929;
-      border-top: 2px solid #444;
-      font-size: 0.9rem;
+      text-align: center; padding: 1rem; background-color: #292929;
+      border-top: 2px solid #444; font-size: 0.9rem;
     }
 
     /* RESPONSIVE */
     @media (max-width: 640px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .section h2 {
-        font-size: 1.2rem;
-      }
-      ul.mod-list {
-        columns: 1;
-      }
+      header h1 { font-size: 2rem; }
+      .section h2 { font-size: 1.2rem; }
+      ul.mod-list { columns: 1; }
+      .ip-box { width: 100%; justify-content: space-between; }
     }
 
     /* ANIMATIONS */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp   { from { opacity: 0; transform: translateY(20px); }  to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
@@ -191,17 +120,28 @@
       </ul>
     </section>
 
-    <!-- MODPACK DOWNLOAD -->
+    <!-- MODPACK -->
     <section class="section" id="descarga" aria-labelledby="descarga-title">
       <h2 id="descarga-title">📥 Descargar Modpack</h2>
       <p>Haz clic en el botón para descargar el modpack completo.</p>
       <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank" rel="noopener">Descargar Modpack</a>
     </section>
 
+    <!-- SERVER IP -->
+    <section class="section" id="ip-servidor" aria-labelledby="ip-title">
+      <h2 id="ip-title">🌐 IP del Servidor</h2>
+      <p>Conéctate usando esta dirección:</p>
+      <div class="ip-box">
+        <span class="ip-text" id="ipText">PoserLand-II.aternos.me:12415</span>
+        <button class="copy-ip-button" id="copyIpBtn" type="button">Copiar IP</button>
+      </div>
+      <p id="copyStatus" style="margin-top:0.5rem; font-size:0.9rem; color:#7fffe8;"></p>
+    </section>
+
     <!-- PATCHES -->
     <section class="section" id="parches" aria-labelledby="parches-title">
       <h2 id="parches-title">🛠️ Parches del Servidor</h2>
-      <p>Los parches son cambios de mods empaquetados en <strong>.zip</strong>. Para instalarlos:</p>
+      <p>Los parches son cambios de mods en archivos <strong>.zip</strong>. Para instalarlos:</p>
       <ul>
         <li>📁 Copiar el parche a la carpeta donde están los mods</li>
         <li>🧩 Descomprimir el archivo</li>
@@ -211,18 +151,20 @@
 
       <h3>🔧 Últimos Parches</h3>
       <div class="patch-log">
-        <!-- EJEMPLO DE ENTRADA DE PARCHE -->
+        <!-- Ejemplo de entrada de parche -->
         <article class="patch-entry" aria-label="Parche #1">
           <div class="patch-header">
             <span class="patch-title">Parche #1 - 07/11/2025</span>
             <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank" rel="noopener">Descargar Parche</a>
           </div>
           <ul>
-            <li>No changes</li>
+            <li>🆕 Añadido: Spell Power Attributes</li>
+            <li>🧹 Eliminado: Clumps (incompatibilidad)</li>
+            <li>🔄 Actualizado: FTB Library</li>
           </ul>
         </article>
 
-        <!-- DUPLICA ESTE BLOQUE PARA NUEVOS PARCHES
+        <!-- Duplica este bloque para nuevos parches
         <article class="patch-entry" aria-label="Parche #2">
           <div class="patch-header">
             <span class="patch-title">Parche #2 - DD/MM/AAAA</span>
@@ -253,23 +195,47 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Animar aparición de secciones al hacer scroll
+    // Animación de aparición por scroll
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Evita reprocesar
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.2 });
-
     sections.forEach((section) => observer.observe(section));
-
-    // Fallback si IntersectionObserver no está disponible
     if (!('IntersectionObserver' in window)) {
       sections.forEach((section) => section.classList.add('visible'));
     }
+
+    // Copiar IP al portapapeles
+    const ipTextEl = document.getElementById('ipText');
+    const copyBtn = document.getElementById('copyIpBtn');
+    const copyStatus = document.getElementById('copyStatus');
+
+    copyBtn.addEventListener('click', async () => {
+      const ip = ipTextEl.textContent.trim();
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(ip);
+        } else {
+          // Fallback para navegadores antiguos
+          const temp = document.createElement('textarea');
+          temp.value = ip;
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand('copy');
+          document.body.removeChild(temp);
+        }
+        copyStatus.textContent = 'IP copiada al portapapeles ✔';
+        setTimeout(() => (copyStatus.textContent = ''), 2500);
+      } catch (e) {
+        copyStatus.textContent = 'No se pudo copiar la IP. Selecciónala manualmente.';
+        setTimeout(() => (copyStatus.textContent = ''), 3000);
+      }
+    });
   </script>
 </body>
 </html>
