@@ -1,10 +1,10 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoserLand-II | Servidor Modificado</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -30,218 +30,14 @@
       border-bottom: 3px solid #00ffd5;
     }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       margin: 1rem 0 0.5rem;
       color: #00ffd5;
-      animation: fadeDown 1s ease-out;
+      animation: fadeDown 0.8s ease-out;
     }
     .version-info {
-      font-size: 1.2rem;
-      animation: fadeUp 1s ease-out;
-    }
-
-    /* CONTAINER */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    /* SECTIONS */
-    .section {
-      margin-bottom: 3rem;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease-out;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .section h2 {
-      color: #00ffd5;
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    /* MOD LIST */
-    ul.mod-list {
-      columns: 2;
-      padding-left: 1rem;
-    }
-    ul.mod-list li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* BUTTONS */
-    .highlight {
-      color: #ff6f61;
-      font-weight: bold;
-    }
-    .download-button, .whatsapp-button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    .download-button {
-      background-color: #00ffd5;
-      color: #121212;
-      box-shadow: 0 0 10px #00ffd5;
-    }
-    .download-button:hover {
-      background-color: #00c4a7;
-      box-shadow: 0 0 15px #00ffd5;
-    }
-    .whatsapp-button {
-      background-color: #25D366;
-      color: white;
-    }
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
-    }
-
-    /* PATCHES */
-    .patch-log {
-      margin-top: 1rem;
-      padding-left: 1rem;
-    }
-    .patch-entry {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background-color: #1e1e1e;
-      border-left: 4px solid #00ffd5;
-      border-radius: 6px;
-    }
-    .patch-entry ul {
-      margin-top: 0.5rem;
-      padding-left: 1.2rem;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #292929;
-      border-top: 2px solid #444;
-      font-size: 0.9rem;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img class="banner" src="image_1762547854371.jpeg" alt="Banner del servidor">
-    <h1>🌟 Bienvenidos a PoserLand-II</h1>
-    <div class="version-info">
-      <p>Versión: <span class="highlight">1.20.1 ✅</span></p>
-      <p>ModLoader: <span class="highlight">Fabric ✅</span></p>
-    </div>
-  </header>
-
-  <div class="container">
-
-    <!-- MODS -->
-    <section class="section" id="mods">
-      <h2>🧩 Lista de Mods (42)</h2>
-      <ul class="mod-list">
-        <li>Architectury API</li><li>Balm (Cliente)</li><li>Beautify</li><li>Carry On</li><li>Cloth Config</li><li>Clumps</li><li>Cupboard</li><li>Dungeons and Taverns</li><li>Fabric API</li><li>Fabric Language Kotlin</li><li>Falling Trees</li><li>Forge Config</li><li>Framework</li><li>FTB Chunks</li><li>FTB Library</li><li>FTB Teams</li><li>Goblin Traders</li><li>Journey Map (Cliente)</li><li>Journey Map Integración</li><li>JEI (Cliente)</li><li>Macaw Bridges</li><li>Macaw Doors</li><li>Macaw Fences y Walls</li><li>Macaw Furniture</li><li>Macaw Lights and...</li><li>Macaw Path and...</li><li>MCA Reborn</li><li>Medieval Origins</li><li>Mod Menu (Cliente)</li><li>Only Hammers and Excavators</li><li>Origins</li><li>OwO</li><li>Pehkui</li><li>PlayerAnimator</li><li>Traveler's Backpack</li><li>Spell Engine</li><li>Spell Power Attributes</li><li>Structure Essentials</li><li>Trinkets</li><li>Wraith Waystones</li><li>Yet AnotherConfigLib</li><li>Zoomify (Cliente)</li>
-      </ul>
-    </section>
-
-    <!-- MODPACK -->
-    <section class="section" id="descarga">
-      <h2>📥 Descargar Modpack</h2>
-      <p>Haz clic en el botón para descargar el modpack completo desde Mega.</p>
-      <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank">Descargar Modpack</a>
-    </section>
-
-    <!-- PATCHES -->
-    <section class="section" id="parches">
-      <h2>🛠️ Parches del Servidor</h2>
-      <p>Los parches contienen cambios de mods. Para instalarlos:</p>
-      <ul>
-        <li>📁 Copiar el parche a la carpeta donde están los mods</li>
-        <li>🧩 Descomprimir el archivo</li>
-        <li>🗑️ Eliminar el .zip si así lo desea</li>
-        <li>✅ ¡Listo!</li>
-      </ul>
-
-      <h3>🔧 Últimos Parches</h3>
-      <div class="patch-log">
-        <div class="patch-entry">
-          <p><strong>Parche #1 - 07/11/2025</strong></p>
-          <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank">Descargar Parche</a>
-          <ul>
-            <li>🆕 Añadido Spell Power Attributes</li>
-            <li>🧹 Eliminado Clumps por incompatibilidad</li>
-            <li>🔄 Actualizado FTB Library</li>
-          </ul>
-        </div>
-      </div>
-    </
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PoserLand-II | Servidor Modificado</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-
-    /* HEADER */
-    header {
-      position: relative;
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    }
-    header img.banner {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-bottom: 3px solid #00ffd5;
-    }
-    header img.logo {
-      width: 120px;
-      margin-top: -60px;
-      border-radius: 50%;
-      border: 3px solid #00ffd5;
-      background-color: #fff;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin: 1rem 0 0.5rem;
-      color: #00ffd5;
-      animation: fadeDown 1s ease-out;
-    }
-    .version-info {
-      font-size: 1.2rem;
-      animation: fadeUp 1s ease-out;
+      font-size: 1.1rem;
+      animation: fadeUp 0.8s ease-out;
     }
 
     /* CONTAINER & SECTIONS */
@@ -254,7 +50,7 @@
       margin-bottom: 3rem;
       opacity: 0;
       transform: translateY(50px);
-      transition: all 0.8s ease-out;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
     .section.visible {
       opacity: 1;
@@ -265,11 +61,13 @@
       border-bottom: 1px solid #444;
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
+      font-size: 1.4rem;
     }
 
     /* MOD LIST */
     ul.mod-list {
       columns: 2;
+      column-gap: 2rem;
       padding-left: 1rem;
     }
     ul.mod-list li {
@@ -281,43 +79,41 @@
       color: #ff6f61;
       font-weight: bold;
     }
-    .download-button {
+    .download-button,
+    .whatsapp-button {
       display: inline-block;
-      background-color: #00ffd5;
-      color: #121212;
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
       font-weight: bold;
       border: none;
       border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+      will-change: transform;
+    }
+    .download-button {
+      background-color: #00ffd5;
+      color: #121212;
       box-shadow: 0 0 10px #00ffd5;
     }
     .download-button:hover {
       background-color: #00c4a7;
       box-shadow: 0 0 15px #00ffd5;
+      transform: translateY(-2px);
     }
     .whatsapp-button {
-      display: inline-block;
       background-color: #25D366;
       color: white;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
     }
     .whatsapp-button:hover {
       background-color: #1ebe5d;
+      transform: translateY(-2px);
     }
 
     /* PATCHES */
     .patch-log {
       margin-top: 1rem;
-      padding-left: 1rem;
+      padding-left: 0;
     }
     .patch-entry {
       margin-bottom: 2rem;
@@ -326,12 +122,19 @@
       border-left: 4px solid #00ffd5;
       border-radius: 6px;
     }
+    .patch-entry .patch-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
+    .patch-entry .patch-title {
+      font-weight: 700;
+    }
     .patch-entry ul {
       margin-top: 0.5rem;
       padding-left: 1.2rem;
-    }
-    .patch-entry li {
-      margin-bottom: 0.3rem;
     }
 
     /* FOOTER */
@@ -343,21 +146,35 @@
       font-size: 0.9rem;
     }
 
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section h2 {
+        font-size: 1.2rem;
+      }
+      ul.mod-list {
+        columns: 1;
+      }
+    }
+
     /* ANIMATIONS */
     @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-30px); }
+      from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <img class="banner" src="image_1762547854371.jpeg" alt="Banner del servidor">
+    <img class="banner" src="image_1762547854371.jpeg" alt="Banner del servidor" />
     <h1>🌟 Bienvenidos a PoserLand-II</h1>
     <div class="version-info">
       <p>Versión: <span class="highlight">1.20.1 ✅</span></p>
@@ -365,24 +182,26 @@
     </div>
   </header>
 
-  <div class="container">
-
-    <section class="section" id="mods">
-      <h2>🧩 Lista de Mods (42)</h2>
+  <main class="container">
+    <!-- MODS -->
+    <section class="section" id="mods" aria-labelledby="mods-title">
+      <h2 id="mods-title">🧩 Lista de Mods (42)</h2>
       <ul class="mod-list">
         <li>Architectury API</li><li>Balm (Cliente)</li><li>Beautify</li><li>Carry On</li><li>Cloth Config</li><li>Clumps</li><li>Cupboard</li><li>Dungeons and Taverns</li><li>Fabric API</li><li>Fabric Language Kotlin</li><li>Falling Trees</li><li>Forge Config</li><li>Framework</li><li>FTB Chunks</li><li>FTB Library</li><li>FTB Teams</li><li>Goblin Traders</li><li>Journey Map (Cliente)</li><li>Journey Map Integración</li><li>JEI (Cliente)</li><li>Macaw Bridges</li><li>Macaw Doors</li><li>Macaw Fences y Walls</li><li>Macaw Furniture</li><li>Macaw Lights and...</li><li>Macaw Path and...</li><li>MCA Reborn</li><li>Medieval Origins</li><li>Mod Menu (Cliente)</li><li>Only Hammers and Excavators</li><li>Origins</li><li>OwO</li><li>Pehkui</li><li>PlayerAnimator</li><li>Traveler's Backpack</li><li>Spell Engine</li><li>Spell Power Attributes</li><li>Structure Essentials</li><li>Trinkets</li><li>Wraith Waystones</li><li>Yet AnotherConfigLib</li><li>Zoomify (Cliente)</li>
       </ul>
     </section>
 
-    <section class="section" id="descarga">
-      <h2>📥 Descargar Modpack</h2>
-      <p>Haz clic en el botón para descargar el modpack completo desde Mega.</p>
-      <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank">Descargar Modpack</a>
+    <!-- MODPACK DOWNLOAD -->
+    <section class="section" id="descarga" aria-labelledby="descarga-title">
+      <h2 id="descarga-title">📥 Descargar Modpack</h2>
+      <p>Haz clic en el botón para descargar el modpack completo.</p>
+      <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank" rel="noopener">Descargar Modpack</a>
     </section>
 
-    <section class="section" id="parches">
-      <h2>📦 Parches del Servidor</h2>
-      <p>Los parches contienen actualizaciones de mods. Se descargan como archivos <strong>.zip</strong> y se instalan siguiendo estos pasos:</p>
+    <!-- PATCHES -->
+    <section class="section" id="parches" aria-labelledby="parches-title">
+      <h2 id="parches-title">🛠️ Parches del Servidor</h2>
+      <p>Los parches son cambios de mods empaquetados en <strong>.zip</strong>. Para instalarlos:</p>
       <ul>
         <li>📁 Copiar el parche a la carpeta donde están los mods</li>
         <li>🧩 Descomprimir el archivo</li>
@@ -392,6 +211,67 @@
 
       <h3>🔧 Últimos Parches</h3>
       <div class="patch-log">
-        <div class="patch-entry">
-          <p><strong>Parche #1 - 07/11/2025</strong></p>
-          <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7
+        <!-- EJEMPLO DE ENTRADA DE PARCHE -->
+        <article class="patch-entry" aria-label="Parche #1">
+          <div class="patch-header">
+            <span class="patch-title">Parche #1 - 07/11/2025</span>
+            <a class="download-button" href="https://mega.nz/file/Lu52BQ6J#FmYmUcz-CJN5e2TDKUYWL4L0zB9p7ugW5w1iaEq0o2k" target="_blank" rel="noopener">Descargar Parche</a>
+          </div>
+          <ul>
+            <li>🆕 Añadido: Spell Power Attributes</li>
+            <li>🧹 Eliminado: Clumps (incompatibilidad)</li>
+            <li>🔄 Actualizado: FTB Library</li>
+          </ul>
+        </article>
+
+        <!-- DUPLICA ESTE BLOQUE PARA NUEVOS PARCHES
+        <article class="patch-entry" aria-label="Parche #2">
+          <div class="patch-header">
+            <span class="patch-title">Parche #2 - DD/MM/AAAA</span>
+            <a class="download-button" href="URL_DEL_ZIP" target="_blank" rel="noopener">Descargar Parche</a>
+          </div>
+          <ul>
+            <li>Detalle 1</li>
+            <li>Detalle 2</li>
+            <li>Detalle 3</li>
+          </ul>
+        </article>
+        -->
+      </div>
+    </section>
+
+    <!-- WHATSAPP -->
+    <section class="section" id="whatsapp" aria-labelledby="whatsapp-title">
+      <h2 id="whatsapp-title">📲 Únete al grupo de WhatsApp</h2>
+      <p>Conéctate con la comunidad, comparte ideas y recibe actualizaciones del servidor.</p>
+      <a class="whatsapp-button" href="https://chat.whatsapp.com/Het2MDdish6CMz69PING59?mode=ems_copy_t" target="_blank" rel="noopener">Entrar al grupo</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>#Mudanzadeserver | PoserLand-II © 2025</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Animar aparición de secciones al hacer scroll
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Evita reprocesar
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach((section) => observer.observe(section));
+
+    // Fallback si IntersectionObserver no está disponible
+    if (!('IntersectionObserver' in window)) {
+      sections.forEach((section) => section.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
